@@ -15,4 +15,6 @@ root@877252fe0265:/# bitcoin-cli -regtest generate 101
   "4a330df24cfbd9be80b988a8e18e99fe4d09a00........................."
   ......
 ]
+root@877252fe0265:/# bitcoin-cli -regtest getblockcount
+101
 ```
