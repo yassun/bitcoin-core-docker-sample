@@ -31,4 +31,3 @@ mm6icVTGKC16QUy4vjUWHHc7fPe3ZNv7jP
 root@877252fe0265:/# bitcoin-cli -regtest getbalance testuser1
 0.00000000
 ```
-
