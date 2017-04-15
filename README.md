@@ -4,7 +4,7 @@
 ```
 $ docker-compose build
 $ docker-compose up
-docker exec -i -t bitcoincoredokcersample_bitcoin-core_1 /bin/bash
+$ docker exec -i -t bitcoincoredockersample_bitcoin-core_1 /bin/bash
 ```
 
 ## create block
