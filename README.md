@@ -31,3 +31,44 @@ mm6icVTGKC16QUy4vjUWHHc7fPe3ZNv7jP
 root@877252fe0265:/# bitcoin-cli -regtest getbalance testuser1
 0.00000000
 ```
+
+## send bitcoin
+```
+root@877252fe0265:/# bitcoin-cli -regtest sendtoaddress mm6icVTGKC16QUy4vjUWHHc7fPe3ZNv7jP 10
+0b3337112ab6b943beee3476bc26b5ca4dc5b1761f9f84647a1d69c6d48fd1ed
+
+root@877252fe0265:/# bitcoin-cli -regtest listunspent 0
+[
+  {
+    "txid": "0b3337112ab6b943beee3476bc26b5ca4dc5b1761f9f84647a1d69c6d48fd1ed",
+    "vout": 0,
+    "address": "mkQCE81TRrJenBLa6pQi9JXDtpq9TV3zB2",
+    "scriptPubKey": "76a914359158e23333eebf03930a2d35ba158198bc9d6e88ac",
+    "amount": 39.99996160,
+    "confirmations": 0,
+    "spendable": true,
+    "solvable": true,
+    "safe": true
+  },
+  {
+    "txid": "0b3337112ab6b943beee3476bc26b5ca4dc5b1761f9f84647a1d69c6d48fd1ed",
+    "vout": 1,
+    "address": "mm6icVTGKC16QUy4vjUWHHc7fPe3ZNv7jP",
+    "account": "testuser1",
+    "scriptPubKey": "76a9143d3b59b191d062817e476c87fc5760925a594c9788ac",
+    "amount": 10.00000000,
+    "confirmations": 0,
+    "spendable": true,
+    "solvable": true,
+    "safe": true
+  }
+]
+```
+
+## mining
+```
+root@877252fe0265:/# bitcoin-cli -regtest generate 1
+[
+  "65d29dafbec20e54555da2c00f8139fe37fad77a2919fbfb40058abea6378ae4"
+]
+```
