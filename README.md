@@ -72,3 +72,29 @@ root@877252fe0265:/# bitcoin-cli -regtest generate 1
   "65d29dafbec20e54555da2c00f8139fe37fad77a2919fbfb40058abea6378ae4"
 ]
 ```
+
+## show ransactions
+```
+root@56451b900162:/# bitcoin-cli -regtest listtransactions
+[
+  {
+    "account": "",
+    "address": "mgLZcREid1CbiXMYtS2Q4fHaJXZSbMu1wR",
+    "category": "immature",
+    "amount": 25.00000000,
+    "vout": 0,
+    "confirmations": 10,
+    "generated": true,
+    "blockhash": "21d1f9a91d6b4aea7a5c025b22c7ada6c1b617843b854a60791d31a6523a2d75",
+    "blockindex": 0,
+    "blocktime": 1492941021,
+    "txid": "51b50cbab2f655b851f197c4fa39eb734a7bdf8f3df51906fad460047cb80cbe",
+    "walletconflicts": [
+    ],
+    "time": 1492941006,
+    "timereceived": 1492941006,
+    "bip125-replaceable": "no"
+  },
+  .....
+]
+```
