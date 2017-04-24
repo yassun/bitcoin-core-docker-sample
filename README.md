@@ -98,3 +98,21 @@ root@56451b900162:/# bitcoin-cli -regtest listtransactions
   .....
 ]
 ```
+
+## show all address
+```
+root@56451b900162:/# bitcoin-cli -regtest getaddressesbyaccount ""
+[
+  "mfxaHt5H2xbADq2yXkTtouXoL7GRL2BLpR",
+  "mmiPkDJf8By9cypfCdYztNWB12n2kMZiey",
+  "mo8kfsMdTdqanhpr2HMqBrxKfUCGEpYL2K",
+  "moG1z6JEzd8oUGeBDYRKwb5i4cbxrQ2p3L",
+  "moV9Wdt1VhzX7eUcf6rRfj4Lzqadtnz6Wx",
+  "moWNmxxUwCc7WaaSq3V52xViRNzb6d6ows",
+  "mpEcA5cKgujUzV7JSt4SuHZLJftRLfxWE1",
+  "mtcqeb4s4gzPac5DEur9FFH6Zm78ToXFpZ",
+  "mybNLVbKgfJ7oKKuymWFT43RPfX8D2XcGU"
+]
+```
+
+``
