@@ -234,3 +234,9 @@ root@56451b900162:/# bitcoin-cli -regtest getblock (block hash)73076728c5bae701a
   "nextblockhash": "14d33e092b667fc794e21779dd7d2bb154c17ff00ac486f7e510d9e2c34594fe"
 }
 ```
+
+show peers
+```
+root@56451b900162:/# bitcoin-cli -regtest getpeerinfo
+
+```
