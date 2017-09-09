@@ -23,3 +23,9 @@ RUN sudo apt-get install -y libzmq3-dev git
 RUN git clone https://github.com/bitcoin/bitcoin.git
 RUN cd bitcoin && ./autogen.sh && ./configure && make && sudo make install
 
+#ruby-buildの導入
+FROM ruby:2.4.1
+
+# bundlerの導入
+RUN gem update --system
+RUN gem install bundler --no-rdoc --no-ri
