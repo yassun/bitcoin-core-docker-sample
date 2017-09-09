@@ -20,12 +20,24 @@ RUN sudo apt-get install -y libminiupnpc-dev libqrencode-dev
 RUN sudo apt-get install -y libzmq3-dev git
 
 # install bitcoin core
-RUN git clone https://github.com/bitcoin/bitcoin.git
-RUN cd bitcoin && ./autogen.sh && ./configure && make && sudo make install
+RUN git clone https://github.com/bitcoin/bitcoin.git && \
+    cd bitcoin && \
+    ./autogen.sh && \
+    ./configure && \
+    make && \
+    sudo make install
 
-#ruby-buildの導入
-FROM ruby:2.4.1
+# install tools
+RUN apt-get install -y --force-yes curl libffi-dev libgdbm-dev libncurses5-dev libreadline-dev libyaml-dev zlib1g-dev
 
-# bundlerの導入
-RUN gem update --system
-RUN gem install bundler --no-rdoc --no-ri
+# install ruby-build
+RUN git clone https://github.com/sstephenson/ruby-build.git /tmp/ruby-build && \
+    cd /tmp/ruby-build && \
+    ./install.sh
+
+# install ruby & base gems
+RUN CONFIGURE_OPTS="--disable-install-doc" ruby-build -v 2.4.1 /usr/local && \
+    gem install bundler rubygems-bundler --no-rdoc --no-ri && \
+    gem regenerate_binstubs && \
+    rm -rf /tmp/ruby-build*
+
